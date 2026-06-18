@@ -1,4 +1,0 @@
-resources:
-- authbridge-runtime-config.yaml
-- envoy-config.yaml
-- spiffe-helper-config.yaml
