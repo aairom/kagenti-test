@@ -1,0 +1,413 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - link "Skip to content" [ref=e4] [cursor=pointer]:
+        - /url: "#start-of-content"
+      - banner [ref=e6]:
+        - heading "Navigation Menu" [level=2] [ref=e7]
+        - generic [ref=e8]:
+          - link "Homepage" [ref=e10] [cursor=pointer]:
+            - /url: /
+            - img [ref=e11]
+          - generic [ref=e13]:
+            - navigation "Global" [ref=e16]:
+              - list [ref=e17]:
+                - listitem [ref=e18]:
+                  - button "Platform" [ref=e20] [cursor=pointer]:
+                    - text: Platform
+                    - img [ref=e21]
+                - listitem [ref=e23]:
+                  - button "Solutions" [ref=e25] [cursor=pointer]:
+                    - text: Solutions
+                    - img [ref=e26]
+                - listitem [ref=e28]:
+                  - button "Resources" [ref=e30] [cursor=pointer]:
+                    - text: Resources
+                    - img [ref=e31]
+                - listitem [ref=e33]:
+                  - button "Open Source" [ref=e35] [cursor=pointer]:
+                    - text: Open Source
+                    - img [ref=e36]
+                - listitem [ref=e38]:
+                  - button "Enterprise" [ref=e40] [cursor=pointer]:
+                    - text: Enterprise
+                    - img [ref=e41]
+                - listitem [ref=e43]:
+                  - link "Pricing" [ref=e44] [cursor=pointer]:
+                    - /url: https://github.com/pricing
+                    - generic [ref=e45]: Pricing
+            - generic [ref=e46]:
+              - button "Search or jump to…" [ref=e49] [cursor=pointer]:
+                - img [ref=e51]
+              - link "Sign in" [ref=e54] [cursor=pointer]:
+                - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fkagenti%2Fadk%2Fblob%2Fmain%2Fhelm%2FREADME.md
+              - link "Sign up" [ref=e55] [cursor=pointer]:
+                - /url: /signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Fblob%2Fshow&source=header-repo&source_repo=kagenti%2Fadk
+              - button "Appearance settings" [ref=e58] [cursor=pointer]:
+                - img
+    - main [ref=e62]:
+      - generic [ref=e63]:
+        - generic [ref=e64]:
+          - generic [ref=e66]:
+            - img [ref=e67]
+            - link "kagenti" [ref=e70] [cursor=pointer]:
+              - /url: /kagenti
+            - generic [ref=e71]: /
+            - strong [ref=e72]:
+              - link "adk" [ref=e73] [cursor=pointer]:
+                - /url: /kagenti/adk
+            - generic [ref=e74]: Public
+          - generic [ref=e75]:
+            - list:
+              - listitem [ref=e76]:
+                - link "You must be signed in to change notification settings" [ref=e77] [cursor=pointer]:
+                  - /url: /login?return_to=%2Fkagenti%2Fadk
+                  - img [ref=e78]
+                  - text: Notifications
+              - listitem [ref=e80]:
+                - link "Fork 6" [ref=e81] [cursor=pointer]:
+                  - /url: /login?return_to=%2Fkagenti%2Fadk
+                  - img [ref=e82]
+                  - text: Fork
+                  - generic "6" [ref=e84]
+              - listitem [ref=e85]:
+                - link "You must be signed in to star a repository" [ref=e87] [cursor=pointer]:
+                  - /url: /login?return_to=%2Fkagenti%2Fadk
+                  - img [ref=e88]
+                  - text: Star
+                  - generic "15 users starred this repository" [ref=e90]: "15"
+        - navigation "Repository" [ref=e91]:
+          - list [ref=e92]:
+            - listitem [ref=e93]:
+              - link "Code" [ref=e94] [cursor=pointer]:
+                - /url: /kagenti/adk
+                - img [ref=e95]
+                - generic [ref=e97]: Code
+            - listitem [ref=e98]:
+              - link "Issues 9" [ref=e99] [cursor=pointer]:
+                - /url: /kagenti/adk/issues
+                - img [ref=e100]
+                - generic [ref=e103]: Issues
+                - generic "9" [ref=e104]
+            - listitem [ref=e105]:
+              - link "Pull requests 7" [ref=e106] [cursor=pointer]:
+                - /url: /kagenti/adk/pulls
+                - img [ref=e107]
+                - generic [ref=e109]: Pull requests
+                - generic "7" [ref=e110]
+            - listitem [ref=e111]:
+              - link "Actions" [ref=e112] [cursor=pointer]:
+                - /url: /kagenti/adk/actions
+                - img [ref=e113]
+                - generic [ref=e115]: Actions
+            - listitem [ref=e116]:
+              - link "Projects" [ref=e117] [cursor=pointer]:
+                - /url: /kagenti/adk/projects
+                - img [ref=e118]
+                - generic [ref=e120]: Projects
+            - listitem [ref=e121]:
+              - link "Security and quality" [ref=e122] [cursor=pointer]:
+                - /url: /kagenti/adk/security
+                - img [ref=e123]
+                - generic [ref=e125]: Security and quality
+            - listitem [ref=e126]:
+              - link "Insights" [ref=e127] [cursor=pointer]:
+                - /url: /kagenti/adk/pulse
+                - img [ref=e128]
+                - generic [ref=e130]: Insights
+      - generic [ref=e138]:
+        - generic [ref=e140]:
+          - generic [ref=e143]:
+            - generic [ref=e144]:
+              - generic [ref=e145]:
+                - heading "Collapse file tree" [level=2] [ref=e146]:
+                  - button "Collapse file tree" [expanded] [ref=e147] [cursor=pointer]:
+                    - img [ref=e148]
+                - heading "Files" [level=2] [ref=e151]
+              - generic [ref=e152]:
+                - button "main branch" [ref=e154] [cursor=pointer]:
+                  - generic [ref=e155]:
+                    - generic [ref=e157]:
+                      - img [ref=e159]
+                      - generic [ref=e162]: main
+                    - generic:
+                      - img
+                - button "Search this repository (forward slash)" [ref=e164] [cursor=pointer]:
+                  - img [ref=e165]
+            - generic [ref=e168]:
+              - img [ref=e170]
+              - combobox "Go to file" [ref=e172]
+            - navigation "File Tree Navigation" [ref=e178]:
+              - tree "Files" [ref=e180]:
+                - treeitem ".agent" [level=1] [ref=e181]:
+                  - generic [ref=e182] [cursor=pointer]:
+                    - img [ref=e184]
+                    - generic [ref=e186]:
+                      - img [ref=e190]
+                      - generic [ref=e192]: .agent
+                - treeitem ".claude" [level=1] [ref=e193]:
+                  - generic [ref=e194] [cursor=pointer]:
+                    - img [ref=e196]
+                    - generic [ref=e198]:
+                      - img [ref=e202]
+                      - generic [ref=e204]: .claude
+                - treeitem ".cursor" [level=1] [ref=e205]:
+                  - generic [ref=e206] [cursor=pointer]:
+                    - img [ref=e208]
+                    - generic [ref=e210]:
+                      - img [ref=e214]
+                      - generic [ref=e216]: .cursor
+                - treeitem ".github" [level=1] [ref=e217]:
+                  - generic [ref=e218] [cursor=pointer]:
+                    - img [ref=e220]
+                    - generic [ref=e222]:
+                      - img [ref=e226]
+                      - generic [ref=e228]: .github
+                - treeitem "agents" [level=1] [ref=e229]:
+                  - generic [ref=e230] [cursor=pointer]:
+                    - img [ref=e232]
+                    - generic [ref=e234]:
+                      - img [ref=e238]
+                      - generic [ref=e240]: agents
+                - treeitem "apps" [level=1] [ref=e241]:
+                  - generic [ref=e242] [cursor=pointer]:
+                    - img [ref=e244]
+                    - generic [ref=e246]:
+                      - img [ref=e250]
+                      - generic [ref=e252]: apps
+                - treeitem "docs" [level=1] [ref=e253]:
+                  - generic [ref=e254] [cursor=pointer]:
+                    - img [ref=e256]
+                    - generic [ref=e258]:
+                      - img [ref=e262]
+                      - generic [ref=e264]: docs
+                - treeitem "examples" [level=1] [ref=e265]:
+                  - generic [ref=e266] [cursor=pointer]:
+                    - img [ref=e268]
+                    - generic [ref=e270]:
+                      - img [ref=e274]
+                      - generic [ref=e276]: examples
+                - treeitem "helm" [expanded] [level=1] [ref=e277]:
+                  - generic [ref=e278] [cursor=pointer]:
+                    - img [ref=e280]
+                    - generic [ref=e282]:
+                      - img [ref=e286]
+                      - generic [ref=e288]: helm
+                  - group "helm" [ref=e289]:
+                    - treeitem ".claude" [level=2] [ref=e290]:
+                      - generic [ref=e291] [cursor=pointer]:
+                        - img [ref=e296]
+                        - generic [ref=e298]:
+                          - img [ref=e302]
+                          - generic [ref=e304]: .claude
+                    - treeitem ".vscode" [level=2] [ref=e305]:
+                      - generic [ref=e306] [cursor=pointer]:
+                        - img [ref=e311]
+                        - generic [ref=e313]:
+                          - img [ref=e317]
+                          - generic [ref=e319]: .vscode
+                    - treeitem "templates" [level=2] [ref=e320]:
+                      - generic [ref=e321] [cursor=pointer]:
+                        - img [ref=e326]
+                        - generic [ref=e328]:
+                          - img [ref=e332]
+                          - generic [ref=e334]: templates
+                    - treeitem ".gitignore" [level=2] [ref=e335]:
+                      - generic [ref=e340] [cursor=pointer]:
+                        - img [ref=e343]
+                        - generic [ref=e345]: .gitignore
+                    - treeitem ".helmignore" [level=2] [ref=e346]:
+                      - generic [ref=e351] [cursor=pointer]:
+                        - img [ref=e354]
+                        - generic [ref=e356]: .helmignore
+                    - treeitem "Chart.lock" [level=2] [ref=e357]:
+                      - generic [ref=e362] [cursor=pointer]:
+                        - img [ref=e365]
+                        - generic [ref=e367]: Chart.lock
+                    - treeitem "Chart.yaml" [level=2] [ref=e368]:
+                      - generic [ref=e373] [cursor=pointer]:
+                        - img [ref=e376]
+                        - generic [ref=e378]: Chart.yaml
+                    - treeitem "README.md" [level=2] [ref=e379]:
+                      - generic [ref=e384] [cursor=pointer]:
+                        - img [ref=e387]
+                        - generic [ref=e389]: README.md
+                    - treeitem "tasks.toml" [level=2] [ref=e390]:
+                      - generic [ref=e395] [cursor=pointer]:
+                        - img [ref=e398]
+                        - generic [ref=e400]: tasks.toml
+                    - treeitem "values.yaml" [level=2] [ref=e401]:
+                      - generic [ref=e406] [cursor=pointer]:
+                        - img [ref=e409]
+                        - generic [ref=e411]: values.yaml
+                - treeitem "skills" [level=1] [ref=e412]:
+                  - generic [ref=e413] [cursor=pointer]:
+                    - img [ref=e415]
+                    - generic [ref=e417]:
+                      - img [ref=e421]
+                      - generic [ref=e423]: skills
+                - treeitem ".aiignore" [level=1] [ref=e424]:
+                  - generic [ref=e426] [cursor=pointer]:
+                    - img [ref=e429]
+                    - generic [ref=e431]: .aiignore
+                - treeitem ".dockerignore" [level=1] [ref=e432]:
+                  - generic [ref=e434] [cursor=pointer]:
+                    - img [ref=e437]
+                    - generic [ref=e439]: .dockerignore
+                - treeitem ".gitattributes" [level=1] [ref=e440]:
+                  - generic [ref=e442] [cursor=pointer]:
+                    - img [ref=e445]
+                    - generic [ref=e447]: .gitattributes
+                - treeitem ".gitignore" [level=1] [ref=e448]:
+                  - generic [ref=e450] [cursor=pointer]:
+                    - img [ref=e453]
+                    - generic [ref=e455]: .gitignore
+                - treeitem ".gitlint" [level=1] [ref=e456]:
+                  - generic [ref=e458] [cursor=pointer]:
+                    - img [ref=e461]
+                    - generic [ref=e463]: .gitlint
+                - treeitem "CLAUDE.md" [level=1] [ref=e464]:
+                  - generic [ref=e466] [cursor=pointer]:
+                    - img [ref=e469]
+                    - generic [ref=e471]: CLAUDE.md
+                - treeitem "CODE_OF_CONDUCT.md" [level=1] [ref=e472]:
+                  - generic [ref=e474] [cursor=pointer]:
+                    - img [ref=e477]
+                    - generic [ref=e479]: CODE_OF_CONDUCT.md
+                - treeitem "CONTRIBUTING.md" [level=1] [ref=e480]:
+                  - generic [ref=e482] [cursor=pointer]:
+                    - img [ref=e485]
+                    - generic [ref=e487]: CONTRIBUTING.md
+                - treeitem "LICENSE" [level=1] [ref=e488]:
+                  - generic [ref=e490] [cursor=pointer]:
+                    - img [ref=e493]
+                    - generic [ref=e495]: LICENSE
+                - treeitem "MAINTAINERS.md" [level=1] [ref=e496]:
+                  - generic [ref=e498] [cursor=pointer]:
+                    - img [ref=e501]
+                    - generic [ref=e503]: MAINTAINERS.md
+                - treeitem "README.md" [level=1] [ref=e504]:
+                  - generic [ref=e506] [cursor=pointer]:
+                    - img [ref=e509]
+                    - generic [ref=e511]: README.md
+                - treeitem "SECURITY.md" [level=1] [ref=e512]:
+                  - generic [ref=e514] [cursor=pointer]:
+                    - img [ref=e517]
+                    - generic [ref=e519]: SECURITY.md
+                - treeitem "install.sh" [level=1] [ref=e520]:
+                  - generic [ref=e522] [cursor=pointer]:
+                    - img [ref=e525]
+                    - generic [ref=e527]: install.sh
+                - treeitem "kagenti-adk.code-workspace" [level=1] [ref=e528]:
+                  - generic [ref=e530] [cursor=pointer]:
+                    - img [ref=e533]
+                    - generic [ref=e535]: kagenti-adk.code-workspace
+                - treeitem "locki.toml" [level=1] [ref=e536]:
+                  - generic [ref=e538] [cursor=pointer]:
+                    - img [ref=e541]
+                    - generic [ref=e543]: locki.toml
+                - treeitem "mise.lock" [level=1] [ref=e544]:
+                  - generic [ref=e546] [cursor=pointer]:
+                    - img [ref=e549]
+                    - generic [ref=e551]: mise.lock
+                - treeitem "mise.toml" [level=1] [ref=e552]:
+                  - generic [ref=e554] [cursor=pointer]:
+                    - img [ref=e557]
+                    - generic [ref=e559]: mise.toml
+                - treeitem "pnpm-lock.yaml" [level=1] [ref=e560]:
+                  - generic [ref=e562] [cursor=pointer]:
+                    - img [ref=e565]
+                    - generic [ref=e567]: pnpm-lock.yaml
+                - treeitem "pnpm-workspace.yaml" [level=1] [ref=e568]:
+                  - generic [ref=e570] [cursor=pointer]:
+                    - img [ref=e573]
+                    - generic [ref=e575]: pnpm-workspace.yaml
+                - treeitem "policy.yaml" [level=1] [ref=e576]:
+                  - generic [ref=e578] [cursor=pointer]:
+                    - img [ref=e581]
+                    - generic [ref=e583]: policy.yaml
+                - treeitem "streaming-extension-spec.md" [level=1] [ref=e584]:
+                  - generic [ref=e586] [cursor=pointer]:
+                    - img [ref=e589]
+                    - generic [ref=e591]: streaming-extension-spec.md
+                - treeitem "tasks.toml" [level=1] [ref=e592]:
+                  - generic [ref=e594] [cursor=pointer]:
+                    - img [ref=e597]
+                    - generic [ref=e599]: tasks.toml
+          - slider "Draggable pane splitter" [ref=e601]
+        - generic [ref=e604]:
+          - generic [ref=e608]:
+            - generic [ref=e610]:
+              - navigation "Breadcrumbs" [ref=e611]:
+                - heading "Breadcrumbs" [level=2] [ref=e612]
+                - list [ref=e613]:
+                  - listitem [ref=e614]:
+                    - link "adk" [ref=e615] [cursor=pointer]:
+                      - /url: /kagenti/adk/tree/main
+                  - listitem [ref=e616]:
+                    - text: /
+                    - link "helm" [ref=e617] [cursor=pointer]:
+                      - /url: /kagenti/adk/tree/main/helm
+              - generic [ref=e618]:
+                - text: /
+                - heading "README.md" [level=1] [ref=e619]
+              - button "Copy path" [ref=e620] [cursor=pointer]:
+                - img [ref=e621]
+            - button "More file actions" [ref=e627] [cursor=pointer]:
+              - img [ref=e628]
+          - generic [ref=e630]:
+            - generic [ref=e632]:
+              - heading "Latest commit" [level=2] [ref=e633]
+              - generic [ref=e636]:
+                - heading "History" [level=2] [ref=e637]
+                - link "History" [ref=e638] [cursor=pointer]:
+                  - /url: /kagenti/adk/commits/main/helm/README.md
+                  - generic [ref=e639]:
+                    - generic:
+                      - img
+                    - generic [ref=e640]: History
+            - generic [ref=e642]:
+              - generic [ref=e644]:
+                - heading "File metadata and controls" [level=2] [ref=e645]
+                - list "File view" [ref=e647]:
+                  - listitem [ref=e648]:
+                    - button "Preview" [ref=e649] [cursor=pointer]:
+                      - generic [ref=e651]: Preview
+                  - listitem [ref=e652]:
+                    - button "Code" [ref=e653] [cursor=pointer]:
+                      - generic [ref=e655]: Code
+                  - listitem [ref=e656]:
+                    - button "Blame" [ref=e657] [cursor=pointer]:
+                      - generic [ref=e659]: Blame
+                - generic [ref=e661]:
+                  - generic [ref=e662]:
+                    - link "Raw" [ref=e664] [cursor=pointer]:
+                      - /url: https://github.com/kagenti/adk/raw/refs/heads/main/helm/README.md
+                      - generic [ref=e666]: Raw
+                    - button "Copy raw file" [ref=e668] [cursor=pointer]:
+                      - img [ref=e669]
+                    - button "Download raw file" [ref=e673] [cursor=pointer]:
+                      - img [ref=e674]
+                  - generic [ref=e677]:
+                    - button "You must be signed in to make or propose changes" [disabled] [ref=e679]:
+                      - img [ref=e680]
+                    - button "More edit options" [ref=e683] [cursor=pointer]:
+                      - img [ref=e684]
+              - region "README.md" [ref=e687]:
+                - article [ref=e689]:
+                  - generic [ref=e690]:
+                    - heading "Kagenti ADK Helm Chart" [level=1] [ref=e691]
+                    - 'link "Permalink: Kagenti ADK Helm Chart" [ref=e692] [cursor=pointer]':
+                      - /url: "#kagenti-adk-helm-chart"
+                      - img [ref=e693]
+                  - paragraph [ref=e695]: "The Kagenti ADK helm chart is packaged and uploaded to the container registry for every release. You can install the chart using the following command:"
+                  - generic [ref=e696]:
+                    - generic [ref=e697]: helm install adk -f config.yaml oci://ghcr.io/kagenti/adk/chart/adk:<release-version>
+                    - button "Copy code to clipboard" [ref=e699] [cursor=pointer]:
+                      - img [ref=e700]
+                  - paragraph [ref=e703]:
+                    - text: Check out the
+                    - link "documentation" [ref=e704] [cursor=pointer]:
+                      - /url: https://github.com/kagenti/adk/blob/main/docs/stable/how-to/deployment-guide
+                    - text: for a detailed deployment guide.
+  - alert [ref=e708]

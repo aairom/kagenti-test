@@ -1,0 +1,50 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# ── uv ────────────────────────────────────────────────────────────────────────
+.uv/
+# uv.lock — intentionally NOT ignored (pins reproducible builds)
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ── IDE / Editor ──────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── macOS ─────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ── Temporary / build artefacts ───────────────────────────────────────────────
+*.tar
+*.tar.gz
+/tmp/
+*.log
+
+# ── Folders starting with underscore (local scratch) ─────────────────────────
+_*/
+
+# ── Kubernetes secrets / local overrides ──────────────────────────────────────
+*.kubeconfig
+kubeconfig

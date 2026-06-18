@@ -1,0 +1,133 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Deployment Manifests — Hello Kagenti Agent
+#
+# Deploys the Hello Kagenti Agent as a Kubernetes Deployment + Service,
+# and registers it with the Kagenti Operator via an AgentRuntime CR.
+#
+# Prerequisites:
+#   - Kagenti Operator installed on the cluster
+#   - Namespace "team1" exists  (kubectl create namespace team1)
+#   - Image built and loaded into minikube (see scripts/build-and-deploy.sh)
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Namespace ────────────────────────────────────────────────────────────────
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: team1
+
+---
+# ── Deployment ───────────────────────────────────────────────────────────────
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-kagenti-agent
+  namespace: team1
+  labels:
+    app.kubernetes.io/name: hello-kagenti-agent
+    app.kubernetes.io/version: "1.0.0"
+    app.kubernetes.io/component: agent
+    # Required by Kagenti Operator for agent discovery
+    protocol.kagenti.io/a2a: ""
+    kagenti.io/framework: "a2a-sdk"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: hello-kagenti-agent
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: hello-kagenti-agent
+        app.kubernetes.io/component: agent
+        # Kagenti injects its AuthBridge sidecar on pods with this label
+        kagenti.io/type: agent
+    spec:
+      containers:
+        - name: hello-agent
+          image: localhost/hello-kagenti-agent:1.0.0
+          imagePullPolicy: Never          # Image loaded directly into minikube
+          ports:
+            - name: http
+              containerPort: 8000
+              protocol: TCP
+          env:
+            - name: HOST
+              value: "0.0.0.0"
+            - name: PORT
+              value: "8000"
+            # ── LLM connection ──────────────────────────────────────────────
+            # Points to Ollama running on the host machine.
+            # host.docker.internal resolves to the host from inside a pod.
+            - name: LLM_API_BASE
+              value: "http://host.docker.internal:11434/v1"
+            - name: LLM_API_KEY
+              value: "dummy"
+            - name: LLM_MODEL
+              value: "ibm/granite4:3b"
+            # ── Agent card public URL ───────────────────────────────────────
+            # Leave empty to use the container's host:port.
+            # Override with the externally reachable URL when using Ingress.
+            - name: AGENT_ENDPOINT
+              value: ""
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 30
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            failureThreshold: 5
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+
+---
+# ── Service ───────────────────────────────────────────────────────────────────
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-kagenti-agent
+  namespace: team1
+  labels:
+    app.kubernetes.io/name: hello-kagenti-agent
+    kagenti.io/type: agent
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: hello-kagenti-agent
+  ports:
+    - name: http
+      port: 8000
+      targetPort: 8000
+      protocol: TCP
+
+---
+# ── AgentRuntime CR ───────────────────────────────────────────────────────────
+# Registers the Deployment with the Kagenti Operator.
+# The operator will:
+#   1. Apply kagenti.io/type: agent labels
+#   2. Compute a config hash and trigger a rolling update
+#   3. Inject the AuthBridge sidecar (if SPIRE is enabled)
+#   4. Create an AgentCard for automatic discovery
+apiVersion: agent.kagenti.dev/v1alpha1
+kind: AgentRuntime
+metadata:
+  name: hello-kagenti-agent-runtime
+  namespace: team1
+spec:
+  type: agent
+  targetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: hello-kagenti-agent
